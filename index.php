@@ -42,11 +42,41 @@
 			<div class="row">
 				<form class="col s12">
 					<div class="row">
-						<div class="col s12">
+						<h5>API Destination</h5>
+					</div>
+					<div class="row">
+						<div class="col l6 s12" style="padding-top: 15px;">
 							<input class="input-field-custom col s11" id="api-url" placeholder="API URL">
+							<!--  -->
+						</div>
+						<div class="input-field col l5 s12">
+							<select id="api-type">
+								<option value="" disabled selected>Choose request type</option>
+								<option value="post">POST</option>
+								<option value="get">GET</option>
+							</select>
+						</div>
+						<div class="input-field col s1">
 							<a href="#!" class="col s1"><i class="material-icons">send</i></a>
 						</div>
 					</div>
+					<div class="row">
+						<h5>Parameters</h5>
+					</div>
+					<table class="striped">
+						<thead>
+							<tr>
+								<th>Parameter Name</th>
+								<th>Parameter Value</th>
+								<th><a href="#!" class="material-icons">add</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>No parameters</td><td></td><td></td>
+							</tr>
+						</tbody>
+					</table>
 				</form>
 			</div>
 		</div>
@@ -63,8 +93,11 @@
 			</div>
 		</footer>
 	</body>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script>
-		
+		$(document).ready(function(){
+			$('select').formSelect();
+		});
 	</script>
 </html>
